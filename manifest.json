@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "AutoApply",
+  "version": "0.1.0",
+  "description": "Automatically Fill up Job Application Forms",
+  "browser_action": {
+    "default_title": "AutoApply",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "cookies",
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://*.myworkdayjobs.com/*"]
+  }]
+}
